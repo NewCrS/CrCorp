@@ -1,36 +1,8 @@
-
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <title>Wallpaper Engine Web</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <video
-    id="bg-video"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source src="wallpaper.mp4" type="video/mp4" />
-    Trình duyệt của bạn không hỗ trợ video HTML5.
+<html>
+<body style="margin:0;overflow:hidden;background:black;">
+  <video autoplay muted loop playsinline style="width:100vw;height:100vh;object-fit:cover;">
+    <source src="wallpaper.mp4" type="video/mp4">
   </video>
-
-  <!-- Nếu muốn thêm overlay text / nút thì đặt ở đây -->
-  <div class="overlay">
-    <!-- Nội dung tùy bạn -->
-  </div>
-
-  <script>
-    const video = document.getElementById('bg-video');
-
-    // Đảm bảo video bắt đầu phát lại ngay khi kết thúc (phòng trường hợp loop bị trễ)
-    video.addEventListener('ended', () => {
-      video.currentTime = 0;
-      video.play();
-    });
-  </script>
 </body>
 </html>
