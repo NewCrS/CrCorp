@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* giữ tỷ lệ, fill màn hình */
+  z-index: -1;       /* nằm dưới mọi thứ */
+}
+
+/* Ví dụ overlay nội dung */
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: sans-serif;
+}
